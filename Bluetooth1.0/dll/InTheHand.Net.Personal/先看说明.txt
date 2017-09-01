@@ -1,0 +1,7 @@
+说明：
+1.这两个文件夹中的内容均于2016.3.20下载自官方网站，安全可靠
+2.这个两个文件夹分别为3.5版本和3.7版本
+3.其中32feet.NET 3.5为安装文件，安装后可以在安装目录下的“NET”和“NETCF”文件夹中看到库文件
+32feet.NET 3.7 (binaries)文件夹中直接含有库文件
+4.官方网页：https://32feet.codeplex.com
+5.官方下载地址：https://32feet.codeplex.com/releases/view/88941
