@@ -36,7 +36,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Unity\Json\NewtonsoftJson\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="zxing">
+      <HintPath>..\Unity\Other\ZXing.Net.0.16.0.0\net4.0\zxing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -51,7 +59,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BarCodeTest.cs" />
     <Compile Include="DynamicTest.cs" />
+    <Compile Include="JsonTest.cs" />
     <Compile Include="SyncTest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

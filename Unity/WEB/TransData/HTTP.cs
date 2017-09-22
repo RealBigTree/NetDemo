@@ -36,22 +36,22 @@ namespace Unity.WEB.TransData {
         /// <param name="url"></param>
         /// <param name="parameters"></param>
         /// <returns></returns>
-        public static string GetHttps(string url, Dictionary<string, object> parameters = null) {
-            var para = parameters.ToStringFormat("=", "&");
-            url += "?" + para;//
-            HttpWebRequest request;
-            ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback((o, oo, ooo, oooo) => true);
-            request = WebRequest.Create(url) as HttpWebRequest;
-            request.ProtocolVersion = HttpVersion.Version10;
-            request.Method = "GET";
-            request.KeepAlive = false;
-            request.UserAgent = "frf";
-            request.ContentType = "application/x-www-form-urlencoded;charset=utf-8";
-            HttpWebResponse rsp = (HttpWebResponse)request.GetResponse();
-            Encoding encoding = Encoding.GetEncoding(rsp.CharacterSet);
-            //return GetResponseString(rsp, encoding);
-            return null;
-        }
+        //public static string GetHttps(string url, Dictionary<string, object> parameters = null) {
+        //    var para = parameters.ToStringFormat("=", "&");
+        //    url += "?" + para;//
+        //    HttpWebRequest request;
+        //    ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback((o, oo, ooo, oooo) => true);
+        //    request = WebRequest.Create(url) as HttpWebRequest;
+        //    request.ProtocolVersion = HttpVersion.Version10;
+        //    request.Method = "GET";
+        //    request.KeepAlive = false;
+        //    request.UserAgent = "frf";
+        //    request.ContentType = "application/x-www-form-urlencoded;charset=utf-8";
+        //    HttpWebResponse rsp = (HttpWebResponse)request.GetResponse();
+        //    Encoding encoding = Encoding.GetEncoding(rsp.CharacterSet);
+        //    //return GetResponseString(rsp, encoding);
+        //    return null;
+        //}
 
 
     }

@@ -43,12 +43,17 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.0.0, Culture=neutral, PublicKeyToken=830ae994e36ac27d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Other\ZXing.Net.0.16.0.0\net4.0\zxing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\ExBool.cs" />
@@ -59,6 +64,7 @@
     <Compile Include="Base\ExList.cs" />
     <Compile Include="Base\ExString.cs" />
     <Compile Include="Common\AssemblyHelper.cs" />
+    <Compile Include="IO\ExImg.cs" />
     <Compile Include="IO\ExIO.cs" />
     <Compile Include="IO\ExStream.cs" />
     <Compile Include="Json\NewtonsoftJson\ExNewtonsoftJson.cs" />
@@ -67,11 +73,152 @@
     <Compile Include="WEB\TransData\HTTP.cs" />
     <Compile Include="WX\WXHelper.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Other\ZXing.Net.0.16.0.0\COPYING" />
+    <None Include="Other\ZXing.Net.0.16.0.0\interop\register.cmd" />
+    <None Include="Other\ZXing.Net.0.16.0.0\THANKS" />
+    <None Include="Other\ZXing.Net.0.16.0.0\uwp\zxing.pri" />
+    <None Include="Other\ZXing.Net.0.16.0.0\winmd\ARM\ZXing.pri" />
+    <None Include="Other\ZXing.Net.0.16.0.0\winmd\ARM\ZXing.winmd" />
+    <None Include="Other\ZXing.Net.0.16.0.0\winmd\x64\ZXing.pri" />
+    <None Include="Other\ZXing.Net.0.16.0.0\winmd\x64\ZXing.winmd" />
+    <None Include="Other\ZXing.Net.0.16.0.0\winmd\x86\ZXing.pri" />
+    <None Include="Other\ZXing.Net.0.16.0.0\winmd\x86\ZXing.winmd" />
+    <None Include="Other\ZXing.Net.0.16.0.0\winmd\ZXing.pri" />
+    <None Include="Other\ZXing.Net.0.16.0.0\winmd\ZXing.winmd" />
+    <None Include="Other\ZXing.Net.0.16.0.0\winrt\zxing.winrt.pri" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Json\NewtonsoftJson\Newtonsoft.Json.dll" />
     <Content Include="Json\NewtonsoftJson\Newtonsoft.Json.xml" />
     <Content Include="ORM\ExFluentData\FluentData.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\CoreCompat.System.Drawing\zxing.corecompat.system.drawing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\CoreCompat.System.Drawing\zxing.corecompat.system.drawing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\CoreCompat.System.Drawing\zxing.corecompat.system.drawing.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\ImageSharp\zxing.imagesharp.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\ImageSharp\zxing.imagesharp.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\ImageSharp\zxing.imagesharp.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V1\Microsoft.Kinect.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V1\Microsoft.Kinect.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V1\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V1\zxing.kinect.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V1\zxing.kinect.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V1\zxing.kinect.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V1\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V1\zxing.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V2\Microsoft.Kinect.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V2\Microsoft.Kinect.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V2\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V2\zxing.kinect.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V2\zxing.kinect.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V2\zxing.kinect.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V2\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\kinect\V2\zxing.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\Magick\zxing.magick.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\Magick\zxing.magick.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\Magick\zxing.magick.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\OpenCV\zxing.opencv.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\OpenCV\zxing.opencv.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\OpenCV\zxing.opencv.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\SkiaSharp\zxing.skiasharp.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\SkiaSharp\zxing.skiasharp.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\Bindings\SkiaSharp\zxing.skiasharp.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\ce2.0\System.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\ce2.0\System.Drawing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\ce2.0\zxing.ce2.0.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\ce2.0\zxing.ce2.0.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\ce2.0\zxing.ce2.0.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\ce3.5\System.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\ce3.5\System.Drawing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\ce3.5\zxing.ce3.5.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\ce3.5\zxing.ce3.5.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\ce3.5\zxing.ce3.5.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\interop\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\interop\zxing.interop.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\interop\zxing.interop.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\interop\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\interop\zxing.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\monodroid\zxing.monoandroid.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\monodroid\zxing.monoandroid.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Other\ZXing.Net.0.16.0.0\monodroid\zxing.monoandroid.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\monodroid\zxing.monoandroid.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net2.0\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net2.0\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net2.0\zxing.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net3.5\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net3.5\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net3.5\zxing.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.0\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.0\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.0\zxing.presentation.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.0\zxing.presentation.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.0\zxing.presentation.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.0\zxing.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.5\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.5\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.5\zxing.presentation.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.5\zxing.presentation.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.5\zxing.presentation.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.5\zxing.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.6\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.6\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.6\zxing.presentation.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.6\zxing.presentation.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.6\zxing.presentation.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.6\zxing.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.7\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.7\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.7\zxing.presentation.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.7\zxing.presentation.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.7\zxing.presentation.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\net4.7\zxing.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\netstandard\1.0\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\netstandard\1.0\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\netstandard\1.0\zxing.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\netstandard\1.1\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\netstandard\1.1\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\netstandard\1.1\zxing.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\netstandard\1.3\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\netstandard\1.3\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\netstandard\1.3\zxing.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\portable\zxing.portable.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\portable\zxing.portable.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\portable\zxing.portable.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\sl4\zxing.sl4.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\sl4\zxing.sl4.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\sl4\zxing.sl4.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\sl5\zxing.sl5.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\sl5\zxing.sl5.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\sl5\zxing.sl5.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\unity\zxing.unity.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\unity\zxing.unity.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\unity\zxing.unity.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\uwp\zxing.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\uwp\zxing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\uwp\zxing.xml" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\winmd\ARM\ZXing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\winmd\ARM\zxing.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\winmd\x64\ZXing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\winmd\x64\zxing.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\winmd\x86\ZXing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\winmd\x86\zxing.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\winmd\ZXing.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\winmd\zxing.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\winrt\zxing.winrt.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\winrt\zxing.winrt.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\winrt\zxing.winrt.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\wp7.0\zxing.wp7.0.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\wp7.0\zxing.wp7.0.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\wp7.0\zxing.wp7.0.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\wp7.1\zxing.wp7.1.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\wp7.1\zxing.wp7.1.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\wp7.1\zxing.wp7.1.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\wp8.0\zxing.wp8.0.dll" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\wp8.0\zxing.wp8.0.pdb" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\wp8.0\zxing.wp8.0.XML" />
+    <Content Include="Other\ZXing.Net.0.16.0.0\说明.txt" />
     <Content Include="ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
